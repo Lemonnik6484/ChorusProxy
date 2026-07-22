@@ -1,5 +1,3 @@
-"""JSON configuration loading and validation (standard library only)."""
-
 from __future__ import annotations
 
 from dataclasses import dataclass
@@ -9,7 +7,7 @@ from typing import Any
 
 
 class ConfigError(ValueError):
-    """Raised when the configuration file is missing or invalid."""
+    """Raised when the config is missing or invalid."""
 
 
 @dataclass(frozen=True)

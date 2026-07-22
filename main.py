@@ -33,7 +33,7 @@ async def run(config_path: str) -> None:
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="A small hostname-based Minecraft TCP router")
-    parser.add_argument("-c", "--config", default="config.json", help="path to JSON configuration (default: config.json)")
+    parser.add_argument("-c", "--config", default="./config.json", help="path to JSON configuration (default: ./config.json)")
     return parser.parse_args()
 
 
