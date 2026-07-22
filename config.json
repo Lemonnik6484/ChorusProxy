@@ -1,0 +1,20 @@
+{
+  "listen": {
+    "host": "0.0.0.0",
+    "port": 25565
+  },
+  "routes": {
+    "mc.example.com": {
+      "host": "192.168.1.10",
+      "port": 25565
+    },
+    "modded.example.com": {
+      "host": "192.168.1.10",
+      "port": 25566
+    },
+    "test.example.com": {
+      "host": "192.168.1.20",
+      "port": 25565
+    }
+  }
+}
