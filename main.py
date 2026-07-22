@@ -5,9 +5,13 @@ import asyncio
 import contextlib
 import logging
 import signal
+from pathlib import Path
 
 from proxy.config import ConfigError, load_config
 from proxy.router import MinecraftRouter
+
+
+DEFAULT_CONFIG_PATH = Path(__file__).resolve().with_name("config.json")
 
 
 async def run(config_path: str) -> None:
@@ -33,7 +37,12 @@ async def run(config_path: str) -> None:
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="A small hostname-based Minecraft TCP router")
-    parser.add_argument("-c", "--config", default="./config.json", help="path to JSON configuration (default: ./config.json)")
+    parser.add_argument(
+        "-c",
+        "--config",
+        default=DEFAULT_CONFIG_PATH,
+        help=f"path to JSON configuration (default: {DEFAULT_CONFIG_PATH})",
+    )
     return parser.parse_args()
 
 
