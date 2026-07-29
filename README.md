@@ -37,3 +37,7 @@ python main.py
 ```
 
 Use `Ctrl+C` to stop cleanly and wait for process to exit
+
+## Mod/Plugin support
+
+The proxy never modifies packets, so there will be no issues with mod/plugin support unless they do something with network
